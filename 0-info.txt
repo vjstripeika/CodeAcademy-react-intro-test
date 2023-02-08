@@ -1,0 +1,8 @@
+Sveiki,
+
+Šiandien darysime react užduotis siekdami įtvirtinti medžiagą, kurią praėjome react.
+Kiekvienai užduočiai reikia sukurti atskirą react-app. T.y. kuriamas atskiras projektas su create-react-app:
+
+INFO: https://reactjs.org/docs/create-a-new-react-app.html
+
+DOCS: https://beta.reactjs.org/learn

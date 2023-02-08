@@ -1,0 +1,44 @@
+2. užduotis "Address book"
+
+Sukurkite react puslapį, kuriame yra komponentai:
+- Container'is (elementas, kurio maksimalus plotis yra 960px, iš šonų yra marigin auto)
+
+- AddressBookForm komponentas, kurį sudaro:
+    - input'as, kuris leidžia įvesti vardą
+    - input'as, kuris leidžia įvesti pavardę
+    - input'as, kuris leidžia įvesti telefono numerį
+        - inputas turi būti custom komponentas, kuris turi savo state, onChange handler
+        - inputas turi priimti value ir onChange propsus
+
+    - Mygtukas, kuris leidžia pridėti naują kontaktą naudojant onClick handleri
+    - AddressBookForm, turi tris useState hookus, kuriuose atskirai bus saugomi vardas, pavardė ir telefono numeris
+    - paspaudus onClick suformuojamas objektas, kuris turi vardą, pavardę ir telefono numerį ir jis sunčiamas į aukštesnį scope.
+
+- Pagrindiniame App.jsx yra state, kuris turi adresato objektų masyvą (Array):
+    - [{name: 'Jonas', surname: 'Jonaitis', phone: '+370 123 45678'}, ...]
+    - masyvas pildomas, kai AddressBookForm paspaudžiamas mygtukas
+
+- AddressBookList komponentas, kuris turi atvaizduoti visus kontaktus, kurie buvo įvesti į formą:
+    - elementai gaunami iš App.jsx state
+    - Address book viduje yra AddressGrid komponentas, kuris turi:
+        - display: grid
+        - grid-template-columns: 1fr 1fr 1fr
+        - gap 16px
+    - AddressCard yra kortelę primenantis komponentas, kuris atvaizduoja
+        - adresato vardą ir pavardę
+        - telefono numerį
+
+
+// App.jsx
+<Container>
+    <AddressBookForm />
+    <AddressBookList />
+</Container>
+
+// useState naudojimas:
+const [<stateName>, <setStateName>] = useState(<defaultState>);
+
+- Negalima mutuoti state'o, tai reiškia, kad negalima:
+    - reassigninti state'o "stateName = 'new value'" (NEDARYTI TO)
+    - (jei Array) naudoti push, splice, pop, shift, unshift, sort, reverse, ... metoduose
+    - (jei object) keisti state vidaus atributų reikšmes (stateName.name = 'new name')

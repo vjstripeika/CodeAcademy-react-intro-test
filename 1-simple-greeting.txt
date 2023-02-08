@@ -1,0 +1,35 @@
+1. užduotis "Simple greeting"
+
+Sukurkite react puslapį, kuriame yra komponentai:
+- Container'is (elementas, kurio maksimalus plotis yra 960px, iš šonų yra marigin auto)
+- Header'is (elementas, kurio plotis yra 100%, fono spalva yra pilka, aukštis 100px, jis yra prikibęs prie viršaus), jis turi būti Container'io viduje
+    - Headeryje yra tušti navigacijos elementai (href="#")
+- Footer'is (elementas, kurio plotis yra 100%, fono spalva yra pilka, aukštis 100px), jis turi būti Container'io viduje
+    - Footeryje yra centruotas copyright tekstas: "© 2023 by Your Name. Proudly created with react."
+- Page'as (elementas, kurio plotis yra 100%, fono spalva yra balta, aukštis "max kiek išeina" ir turinys gali šį elementą praplėsti), jis turi būti Container'io viduje
+    - Pages sudarytas iš trijų sekcijų (section'ų), tarp kurių yra 16px tarpai.
+    - Pirmoje sekcijoje yra paveikslėlis (jūsų nuožiūra), kurio max aukštis yra 250px
+    - Antroje sekcijoje yra mygtukas (stilius - jūsų nuožiūra) (tekstas - "Spustelk")
+        - Paspaudus mygtuką trečioje sekcijoje turi atsirasti tekstas "Sveiki atvykę!"
+    - Trečia sekcija yra tuščia, kol dar nebuvo paspaustas mygtukas
+
+- Šią užduotį įkelti į github "react-1-simple-greeting"
+
+SUFLERIAI:
+
+// App.jsx
+<Container>
+    <Header />
+    <Page />
+    <Footer />
+</Container>
+
+// Container.jsx
+- Naudoja props, kad atvaizduoti elementus tarp tagų
+- Jei užmiršote panaudokite console.log(props) kad sužinoti kuris propsas tai daro.
+
+// Page.jsx
+- naudoja state, kad keisti pasveikinimo būseną
+
+
+
